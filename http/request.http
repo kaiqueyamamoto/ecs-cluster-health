@@ -1,0 +1,7 @@
+GET http://localhost:8080/api/base/yamamoto
+
+#### actuator
+GET http://localhost:8080/actuator
+
+#### actuator health
+GET http://localhost:8080/actuator/health
