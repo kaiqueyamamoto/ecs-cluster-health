@@ -32,10 +32,7 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-#        env:
-#          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-#          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        run: mvn clean install && echo  ${{ secrets.DOCKERHUB_USERNAME && ${{ secrets.DOCKER_PASSWORD }}
+        run: mvn clean install && echo ${{ secrets.DOCKERHUB_USERNAME }} && ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
